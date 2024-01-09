@@ -1,0 +1,30 @@
+@import "src/Variables.scss";
+
+.main {
+  min-height: 100vh;
+  background-color: $light;
+  color: $dark;
+  position: relative;
+
+  padding: 70px 0;
+
+  transition: $transition;
+
+  &.dark {
+    background-color: $dark;
+    color: $light;
+  }
+
+  .content {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    .content {
+      width: 90%;
+    }
+  }
+}
