@@ -3,6 +3,7 @@ import "./Home.scss";
 import { useEffect } from "react";
 import axios from 'axios'
 import requests from "../../Requests.js";
+import Row from "../../Components/Row/Row.jsx";
 
 const Home = () => {
 
@@ -28,9 +29,15 @@ const Home = () => {
         </div>
 
       </div>
-      <h2>Popular movies</h2>
-      <h2>Popular TV shows</h2>
-      <h2>Popular people</h2>
+      <div className="lists">
+
+        <h2>Popular movies</h2>
+        <Row request={requests.requestPopular} />
+        <h2>Popular TV shows</h2>
+        <Row request={requests.requestTopRated} />
+        <h2>Popular people</h2>
+        <Row request={requests.requestTrending} />
+      </div>
 
 
 
